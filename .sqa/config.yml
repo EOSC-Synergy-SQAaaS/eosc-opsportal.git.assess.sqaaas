@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.in2p3.fr/opsportal/eosc-opsportal:
+      branch: master
+      repo: https://gitlab.in2p3.fr/opsportal/eosc-opsportal.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.in2p3.fr/opsportal/eosc-opsportal git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-platinum-donkey.sh
+        container: qc.acc_snoopy-pear-dane
+  QC.Doc:
+    repos:
+      gitlab.in2p3.fr/opsportal/eosc-opsportal find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-flax-crane.sh
+        container: qc.doc_flaky-brown-drever
+      gitlab.in2p3.fr/opsportal/eosc-opsportal git:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-copper-mastiff.sh
+        container: qc.doc_slimy-myrtle-buffalo
+      gitlab.in2p3.fr/opsportal/eosc-opsportal markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-peach-leopard.sh
+        container: qc.doc_bluesy-white-swan
+  QC.Lic:
+    repos:
+      gitlab.in2p3.fr/opsportal/eosc-opsportal licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-goldenrod-hyrax.sh
+        container: qc.lic_queasy-scarlet-tapir
+  QC.Sty:
+    repos:
+      gitlab.in2p3.fr/opsportal/eosc-opsportal hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-carmine-cassowary.sh
+        container: qc.sty_stinky-ultramarine-impala
+      gitlab.in2p3.fr/opsportal/eosc-opsportal jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-vermilion-catfish.sh
+        container: qc.sty_snazzy-rust-gharial
+  QC.Ver:
+    repos:
+      gitlab.in2p3.fr/opsportal/eosc-opsportal get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-asparagus-bloodhound.sh
+        container: qc.ver_sickly-viridian-walrus
+timeout: 5400
