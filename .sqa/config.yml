@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       gitlab.in2p3.fr/opsportal/eosc-opsportal git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-platinum-donkey.sh
-        container: qc.acc_snoopy-pear-dane
+        - /usr/bin/env sh .sqa/script.bumpy-ecru-balinese.sh
+        container: qc.acc_hasty-ecru-ant
   QC.Doc:
     repos:
       gitlab.in2p3.fr/opsportal/eosc-opsportal find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-flax-crane.sh
-        container: qc.doc_flaky-brown-drever
+        - /usr/bin/env sh .sqa/script.sleazy-asparagus-bandicoot.sh
+        container: qc.doc_squeaky-pumpkin-audemer
       gitlab.in2p3.fr/opsportal/eosc-opsportal git:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-copper-mastiff.sh
-        container: qc.doc_slimy-myrtle-buffalo
+        - /usr/bin/env sh .sqa/script.skimpy-champagne-tetra.sh
+        container: qc.doc_geeky-blue-argentino
       gitlab.in2p3.fr/opsportal/eosc-opsportal markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-peach-leopard.sh
-        container: qc.doc_bluesy-white-swan
+        - /usr/bin/env sh .sqa/script.crabby-ochre-moorhen.sh
+        container: qc.doc_droopy-wisteria-numbat
   QC.Lic:
     repos:
       gitlab.in2p3.fr/opsportal/eosc-opsportal licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-goldenrod-hyrax.sh
-        container: qc.lic_queasy-scarlet-tapir
+        - /usr/bin/env sh .sqa/script.snoopy-rose-dhole.sh
+        container: qc.lic_cozy-teal-barnacle
   QC.Sty:
     repos:
       gitlab.in2p3.fr/opsportal/eosc-opsportal hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-carmine-cassowary.sh
-        container: qc.sty_stinky-ultramarine-impala
+        - /usr/bin/env sh .sqa/script.lovely-lemon-chihuahua.sh
+        container: qc.sty_slimy-viridian-slug
       gitlab.in2p3.fr/opsportal/eosc-opsportal jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-vermilion-catfish.sh
-        container: qc.sty_snazzy-rust-gharial
+        - /usr/bin/env sh .sqa/script.chummy-sapphire-cockroach.sh
+        container: qc.sty_tacky-green-chipmunk
   QC.Ver:
     repos:
       gitlab.in2p3.fr/opsportal/eosc-opsportal get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-asparagus-bloodhound.sh
-        container: qc.ver_sickly-viridian-walrus
+        - /usr/bin/env sh .sqa/script.scummy-pear-bear.sh
+        container: qc.ver_grumpy-rust-seal
 timeout: 5400
